@@ -3,7 +3,7 @@ from unittest import TestCase
 
 from parameterized import parameterized
 
-from src.generalist.Generalizers.NoneGeneralizer import NoneGeneralizer
+from src.generalist.NoneGeneralizer import NoneGeneralizer
 
 
 class TestNoneGeneralizer(TestCase):

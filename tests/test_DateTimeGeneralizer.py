@@ -3,7 +3,7 @@ from datetime import datetime
 
 from parameterized import parameterized
 
-from src.generalist.Generalizers.DateTimeGeneralizer import DateTimeGeneralizer
+from src.generalist.DateTimeGeneralizer import DateTimeGeneralizer
 
 
 class TestDateTimeGeneralizer(unittest.TestCase):

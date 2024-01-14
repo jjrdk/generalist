@@ -1,7 +1,7 @@
 import datetime
 from typing import Any
 
-from src.generalist.Generalizers.BaseGeneralizer import BaseGeneralizer
+from src.generalist.BaseGeneralizer import BaseGeneralizer
 
 
 class DateTimeGeneralizer(BaseGeneralizer):

@@ -1,9 +1,10 @@
 from unittest import TestCase
 
+from src.generalist.BaseGeneralizer import BaseGeneralizer
 from src.generalist.DataFly import DataflyAlgo
-from src.generalist.Generalizers.NumericGeneralizer import NumericGeneralizer
-from src.generalist.Generalizers.StringMaskingGeneralizer import StringMaskingGeneralizer
-from src.generalist.Generalizers.NoneGeneralizer import NoneGeneralizer
+from src.generalist.NoneGeneralizer import NoneGeneralizer
+from src.generalist.NumericGeneralizer import NumericGeneralizer
+from src.generalist.StringMaskingGeneralizer import StringMaskingGeneralizer
 
 
 class TestDataflyAlgo(TestCase):

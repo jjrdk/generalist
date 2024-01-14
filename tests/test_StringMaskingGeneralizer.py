@@ -2,7 +2,7 @@ import unittest
 from datetime import datetime
 import parameterized
 
-from src.generalist.Generalizers.StringMaskingGeneralizer import StringMaskingGeneralizer
+from src.generalist.StringMaskingGeneralizer import StringMaskingGeneralizer
 
 
 class TestStringMaskingGeneralizer(unittest.TestCase):

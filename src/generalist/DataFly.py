@@ -1,6 +1,6 @@
 from typing import List, Dict, Any
 
-from src.generalist.Generalizers import BaseGeneralizer
+from src.generalist import BaseGeneralizer
 
 
 class DataflyAlgo:

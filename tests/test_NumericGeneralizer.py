@@ -3,12 +3,12 @@ from unittest import TestCase
 
 from parameterized import parameterized
 
-from src.generalist.Generalizers.NumericGeneralizer import NumericGeneralizer
+from src.generalist import NumericGeneralizer
 
 
 class TestNumericGeneralizer(TestCase):
     def setUp(self):
-        self.generalizer = NumericGeneralizer(10)
+        self.generalizer = NumericGeneralizer.NumericGeneralizer(10)
 
     @parameterized.expand(
         [
