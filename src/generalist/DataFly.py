@@ -10,7 +10,8 @@ class DataflyAlgo:
     def anonymize(self, items: List) -> List[Any]:
         for item in items:
             for identifier in self._generalizers.keys():
-                setattr(item, identifier, self._generalize(identifier, getattr(item, identifier)))
+                value = self._generalize(identifier, getattr(item, identifier))
+                setattr(item, identifier, value)
         return items
 
     def _generalize(self, attribute, item) -> Any:
@@ -18,7 +19,7 @@ class DataflyAlgo:
             return None
 
         generalizer = self._generalizers.get(attribute)
-        if generalizer.can_handle(type(item)):
+        if generalizer.can_handle(item):
             return generalizer.generalize(item)
 
-        raise ValueError("Cannot handle type: " + str(type(item)))
+        raise ValueError("Cannot handle type: {}".format(type(item)))

@@ -7,8 +7,8 @@ class NumericGeneralizer(BaseGeneralizer):
     def __init__(self, step: float):
         self._step = step
 
-    def can_handle(self, item_type: Type) -> bool:
-        return item_type == float or item_type == int
+    def can_handle(self, item: Any) -> bool:
+        return isinstance(item, float) or isinstance(item, int)
 
     def inner_generalize(self, item: Any) -> Any:
         return round(item / self._step) * self._step

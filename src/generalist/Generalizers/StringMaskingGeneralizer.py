@@ -11,8 +11,8 @@ class StringMaskingGeneralizer(BaseGeneralizer):
         self._start = start
         self._mask = mask
 
-    def can_handle(self, item_type: Type) -> bool:
-        return item_type == str
+    def can_handle(self, item: Any) -> bool:
+        return isinstance(item, str)
 
     def inner_generalize(self, item: Any) -> Any:
         prefix = str(item)[:self._start]
@@ -21,14 +21,3 @@ class StringMaskingGeneralizer(BaseGeneralizer):
 
     def __str__(self):
         return "StringMaskingGeneralizer(mask={})".format(self._mask)
-
-
-class NoneGeneralizer(BaseGeneralizer):
-    def can_handle(self, item_type: Type) -> bool:
-        return True
-
-    def inner_generalize(self, item: Any) -> Any:
-        return None
-
-    def __str__(self):
-        return "NoneGeneralizer()"

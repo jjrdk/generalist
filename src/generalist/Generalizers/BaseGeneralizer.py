@@ -5,15 +5,12 @@ from abc import ABC, abstractmethod
 class BaseGeneralizer(ABC):
 
     @abstractmethod
-    def can_handle(self, item_type: Type) -> bool:
+    def can_handle(self, item: Any) -> bool:
         pass
 
     def generalize(self, item: Any):
         if item is None:
             return None
-
-        if not self.can_handle(type(item)):
-            raise ValueError("Cannot handle type: " + str(T))
 
         return self.inner_generalize(item)
 

@@ -2,7 +2,8 @@ from unittest import TestCase
 
 from src.generalist.DataFly import DataflyAlgo
 from src.generalist.Generalizers.NumericGeneralizer import NumericGeneralizer
-from src.generalist.Generalizers.StringMaskingGeneralizer import StringMaskingGeneralizer, NoneGeneralizer
+from src.generalist.Generalizers.StringMaskingGeneralizer import StringMaskingGeneralizer
+from src.generalist.Generalizers.NoneGeneralizer import NoneGeneralizer
 
 
 class TestDataflyAlgo(TestCase):
